@@ -16,68 +16,112 @@ public class PersonCreator
     private int ssn;
     private int phonenumber;
     private String dob;
-    
-    public int agenumber (int age);
+
+    public PersonCreator(String first , String last)
+    {
+     name = first + " " + last;   
+     
+    }
+        
+    public int setAge (int age)
     {
         agenumber = age;
-        if (age > 18 || age < 50) 
+        if (age > 1016 && age < 0) 
         {
-           System.out.println("Age is "age"") 
+            System.out.println("Age is "age"); 
         }
     }
-    
-    public String height (int feet, int inches);
+
+    public String setHeight (int feet, int inches)
     {
         height = feet + "-" + inches;
     }
-    
-    public int weight (int pounds); 
+
+    public int setWeight (int pounds)
     {
         weight = pounds;
     }
-    public String name (String first, String last);
+
+    public String setAddress (int streetnb, String streetnm)
     {
-        name = "first" + "last";
+        address = streetnb + " " + streetnm;
     }
-    
-    public String address (int streetnb, String streetnm);
-    {
-        address = streetnb + "streetnm";
-    }
-    
-    public int ssn (int begin, int middle, int end);
+
+    public int setSsn (int begin, int middle, int end)
     {
         ssn = begin + "-" middle "-" + end;
         if (age > 999)
         {
-            System.out.println("Use a lower number")
+            System.out.println("Use a lower number");
         }
         else if (begin > 999)
         {
-            System.out.println("Use a lower number")
+            System.out.println("Use a lower number");
         }
-        
+
         else if (end > 9999)
         {
-            System.out.println("Use a lower number")
+            System.out.println("Use a lower number");
         }
     } 
-    
-    public int phonenumber (int stanzaA, int stanzaB, int stanzaC);
+
+    public int phonenumber (int stanzaA, int stanzaB, int stanzaC)
     { 
-        phonenumber = stanzaA + "-" + stanzaB + "-" + stanzaC;
         if (stanzaA > 999)
         {
-            System.out.println("Use a lower number")
+            System.out.println("Use a lower number");
         }
         else if (stanzaB > 999)
         {
-            System.out.println("Use a lower number")
+            System.out.println("Use a lower number");
         }
-        else (stanzaC > 9999) 
+        else if (stanzaC > 9999) 
         {
-            System.out.println("Use a lower number")
+            System.out.println("Use a lower number");
+        }
+        else 
+        {
+            phonenumber = stanzaA + "-" + stanzaB + "-" + stanzaC;
         }
     }
+
+    public String dob (String monthOb, int dayOb, int yearOb)
+    {
+        if (monthOb < 0 && monthOb > 12)
+        {
+          System.err.println("Please choose a month between 1 and 12");
+        }
+        
+        else if (dayOb < 0 && dayOb > 31)
+        {
+           System.err.println("Please choose a day between 1 and 31");
+        }
+      
+        else if (yearOb < 1000 && yearOb > 2016)
+        {
+            System.err.println("Please choose a year between 1000 and 2016");
+        }
+        else 
+        {
+            dob = monthOb + "-" + dayOb + "-" + yearOb;
+        }
+    }
+        public void person()
+    {
+        System.out.println("##################");
+        System.out.println("# Name: ");
+        System.out.println("# agenumber");
+        System.out.println("# height");
+        System.out.println("# weight");
+        System.out.println("# address");
+        System.out.println("# ssn");
+        System.out.println("#  phonenumber");
+        System.out.println("# dob");
+        System.out.println("##################");
+        System.out.println();
+        
+        
+    }
+    
 }
 
