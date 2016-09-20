@@ -7,50 +7,53 @@
  */
 public class PersonCreator
 {
-    // Your class begins here!
+    // These are the field variables I made. 
     private int agenumber;
     private String height;
     private int weight;
     private String name;
     private String address;
-    private int ssn;
-    private int phonenumber;
+    private String ssn;
+    private String phonenumber;
     private String dob;
-
+    // In the constructor, I made sure to ask the name, as that is the most inportant thing.  
+    // i set the name to be made of two strings since that is most appropriate for a name.
     public PersonCreator(String first , String last)
     {
      name = first + " " + last;   
      
     }
-        
-    public int setAge (int age)
+    // In the method, I included several conditional statements to filter out the users' choices of input.
+    // I did this to make sure each answer was appropriate. For everything that could simply be a whole 
+    
+    public void setAge (int age)
     {
         agenumber = age;
         if (age > 1016 && age < 0) 
         {
-            System.out.println("Age is "age"); 
+            System.out.println("Age is " + age); 
         }
     }
 
-    public String setHeight (int feet, int inches)
+    public void setHeight (int feet, int inches)
     {
         height = feet + "-" + inches;
     }
 
-    public int setWeight (int pounds)
+    public void setWeight (int pounds)
     {
         weight = pounds;
     }
 
-    public String setAddress (int streetnb, String streetnm)
+    public void setAddress (int streetnb, String streetnm)
     {
         address = streetnb + " " + streetnm;
     }
 
-    public int setSsn (int begin, int middle, int end)
+    public void setSsn (int begin, int middle, int end)
     {
-        ssn = begin + "-" middle "-" + end;
-        if (age > 999)
+        ssn = begin + "- " + middle + "- " + end;
+        if (agenumber > 999)
         {
             System.out.println("Use a lower number");
         }
@@ -65,7 +68,7 @@ public class PersonCreator
         }
     } 
 
-    public int phonenumber (int stanzaA, int stanzaB, int stanzaC)
+    public void phonenumber (int stanzaA, int stanzaB, int stanzaC)
     { 
         if (stanzaA > 999)
         {
@@ -85,7 +88,7 @@ public class PersonCreator
         }
     }
 
-    public String dob (String monthOb, int dayOb, int yearOb)
+    public void dob (int monthOb, int dayOb, int yearOb)
     {
         if (monthOb < 0 && monthOb > 12)
         {
