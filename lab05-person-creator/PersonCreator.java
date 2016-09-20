@@ -24,7 +24,8 @@ public class PersonCreator
      
     }
     // In the method, I included several conditional statements to filter out the users' choices of input.
-    // I did this to make sure each answer was appropriate. For everything that could simply be a whole 
+    // I did this to make sure each answer was appropriate. For everything that could simply be a whole number I set them to int.
+    // I made sure to set the methods to void because they didn't have any return values. 
     
     public void setAge (int age)
     {
@@ -122,8 +123,6 @@ public class PersonCreator
         System.out.println("# dob");
         System.out.println("##################");
         System.out.println();
-        
-        
     }
     
 }
